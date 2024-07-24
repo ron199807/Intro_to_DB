@@ -22,7 +22,7 @@ CREATE TABLE Customers(
     address TEXT
 );
 
-CREATE TABLE Oders (
+CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     order_date DATE NOT NULL,
@@ -30,14 +30,10 @@ CREATE TABLE Oders (
 );
 
 CREATE TABLE Order_Details (
-    order_details INT AUTO_INCREMENT PRIMARY KEY,
+    order_details_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity DOUBLE NOT NULL
+    quantity DOUBLE NOT NULL,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Books (book_id)
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
-
-
-
-
