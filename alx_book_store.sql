@@ -25,7 +25,7 @@ CREATE TABLE Customers(
 CREATE TABLE Oders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
-    oder_date DATE NOT NULL,
+    order_date DATE NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
